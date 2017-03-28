@@ -1,0 +1,16 @@
+parameters:
+  salty:
+    build:
+      linux.system: true
+    formula:
+      linux:
+        address: https://github.com/salt-formulas/salt-formula-linux.git
+        branch: master
+
+  linux:
+    system:
+      enabled: true
+      package:
+        python2.7:
+        python2.7-dev:
+        build-essential:

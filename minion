@@ -1,0 +1,19 @@
+root_dir: ./.tmp/
+file_client: local
+file_roots:
+  base:
+    - ./states
+reclass: &reclass
+  storage_type: yaml_fs
+  inventory_base_uri: ./reclass
+ext_pillar:
+  - reclass: *reclass
+master_tops:
+  reclass: *reclass
+
+log_level: error
+
+grains:
+  root: /root/saltycontainers
+
+id: local

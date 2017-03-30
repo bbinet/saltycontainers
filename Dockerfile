@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM resin/amd64-debian:jessie
 
 MAINTAINER Bruno Binet <bruno.binet@gmail.com>
 
@@ -13,4 +13,4 @@ COPY reclass ./reclass/
 RUN make apply_formula
 RUN make apply_build
 
-CMD /bin/bash
+ENV INITSYSTEM on
